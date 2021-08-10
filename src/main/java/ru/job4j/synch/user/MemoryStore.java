@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @ThreadSafe
 public class MemoryStore implements Store {
     @GuardedBy("this")
-    Map<Integer, User> users = new ConcurrentHashMap<>();
+    private final Map<Integer, User> users = new ConcurrentHashMap<>();
 
     @Override
     public synchronized boolean add(User user) {
