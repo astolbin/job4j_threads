@@ -77,6 +77,12 @@ public class RowColSum {
         return rsl;
     }
 
+    /**
+     *
+     * @param data input matrix
+     * @param current currents row and column
+     * @return CompletableFuture
+     */
     public static CompletableFuture<Sums> getTask(int[][] data, int current) {
         return CompletableFuture.supplyAsync(() -> {
             Sums sum = new Sums();
