@@ -57,6 +57,12 @@ public class RowColSum {
         return rsl;
     }
 
+    /**
+     * @param matrix nested array of int
+     * @return array of Sums
+     * @throws ExecutionException
+     * @throws InterruptedException
+     */
     public static Sums[] asyncSum(int[][] matrix) throws ExecutionException, InterruptedException {
         Sums[] rsl = new Sums[matrix.length];
         Map<Integer, CompletableFuture<Sums>> futures = new HashMap<>();
